@@ -3,4 +3,20 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Primary Shades -->
+    <color name="shade0">#ffffff</color>
+    <!--<color name="shade1">#f0f0f0</color>-->
+    <color name="shade1">#f7f7f7</color>
+    <color name="shade2">#b0b4bd</color>
+    <color name="shade3">#717580</color>
+    <color name="shade4">#42454c</color>
+    <color name="shade5">#242529</color>
+    <color name="shade6">#0f1114</color>
+
+    <color name="cp1">#f3f3f3</color>
+    <color name="cp2">#88c705</color>
+    <color name="cp3">#c78932</color>
+    <color name="cp4">#ff5252</color>
+    <color name="cp5">#355c7d</color>
 </resources>
