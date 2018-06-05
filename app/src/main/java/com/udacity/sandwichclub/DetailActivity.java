@@ -15,15 +15,34 @@ import com.udacity.sandwichclub.utils.JsonUtils;
 
 import org.json.JSONException;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
 
+    @BindView(R.id.name_tv)
+    TextView nameTv;
+    @BindView(R.id.origin_tv)
+    TextView originTv;
+    @BindView(R.id.description_tv)
+    TextView descriptionTv;
+    @BindView(R.id.also_known_tv)
+    TextView alsoKnownTv;
+    @BindView(R.id.also_known_lbl_tv)
+    TextView alsoKnownLbtTv;
+    @BindView(R.id.ingredients_tv)
+    TextView ingredientsTv;
+    @BindView(R.id.ingredients_lbl_tv)
+    TextView ingredientsLblTv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        ButterKnife.bind(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ImageView ingredientsIv = findViewById(R.id.image_iv);
@@ -73,13 +92,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        TextView nameTv = findViewById(R.id.name_tv);
-        TextView originTv = findViewById(R.id.origin_tv);
-        TextView descriptionTv = findViewById(R.id.description_tv);
-        TextView alsoKnownTv = findViewById(R.id.also_known_tv);
-        TextView alsoKnownLbtTv = findViewById(R.id.also_known_lbl_tv);
-        TextView ingredientsTv = findViewById(R.id.ingredients_tv);
-        TextView ingredientsLblTv = findViewById(R.id.ingredients_lbl_tv);
 
         nameTv.setText(sandwich.getMainName());
 

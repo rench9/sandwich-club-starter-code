@@ -10,43 +10,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonUtils {
+    public static String NAME = "name";
+    public static String MAINNAME = "mainName";
+    public static String ALSOKNOWNAS = "alsoKnownAs";
+    public static String ORIGIN = "placeOfOrigin";
+    public static String DESCRIPTION = "description";
+    public static String IMAGE = "image";
+    public static String INGREDIENTS = "ingredients";
 
     public static Sandwich parseSandwichJson(String json) throws JSONException {
         Sandwich sandwich = new Sandwich();
         JSONObject jsonObject = new JSONObject(json);
 
         try {
-            sandwich.setMainName(jsonObject.getJSONObject("name").getString("mainName"));
+            sandwich.setMainName(jsonObject.getJSONObject(NAME).getString(MAINNAME));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         try {
-            sandwich.setAlsoKnownAs(jsonArrayToList(jsonObject.getJSONObject("name").getJSONArray("alsoKnownAs")));
+            sandwich.setAlsoKnownAs(jsonArrayToList(jsonObject.getJSONObject(NAME).getJSONArray(ALSOKNOWNAS)));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         try {
-            sandwich.setPlaceOfOrigin(jsonObject.getString("placeOfOrigin"));
+            sandwich.setPlaceOfOrigin(jsonObject.getString(ORIGIN));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         try {
-            sandwich.setDescription(jsonObject.getString("description"));
+            sandwich.setDescription(jsonObject.getString(DESCRIPTION));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         try {
-            sandwich.setImage(jsonObject.getString("image"));
+            sandwich.setImage(jsonObject.getString(IMAGE));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         try {
-            sandwich.setIngredients(jsonArrayToList(jsonObject.getJSONArray("ingredients")));
+            sandwich.setIngredients(jsonArrayToList(jsonObject.getJSONArray(INGREDIENTS)));
         } catch (Exception e) {
             e.printStackTrace();
         }

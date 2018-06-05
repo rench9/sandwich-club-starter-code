@@ -37,4 +37,21 @@
     <dimen name="padding5">20dp</dimen>
     <dimen name="padding6">24dp</dimen>
     <dimen name="padding7">28dp</dimen>
+
+    <!-- Radius -->
+
+    <dimen name="radius0">0dp</dimen>
+    <dimen name="radius1">2dp</dimen>
+    <dimen name="radius2">4dp</dimen>
+    <dimen name="radius3">6dp</dimen>
+    <dimen name="radius4">8dp</dimen>
+    <dimen name="radius5">9dp</dimen>
+
+    <!-- Misc -->
+    <dimen name="bottom_banner_height">56dp</dimen>
+    <dimen name="desc_content_padding">290dp</dimen>
+    <dimen name="ellipse_frame_side_length">320dp</dimen>
+    <dimen name="image_size">220dp</dimen>
+    <dimen name="radius_for_image">110dp</dimen>
+    <dimen name="no_height">0dp</dimen>
 </resources>
